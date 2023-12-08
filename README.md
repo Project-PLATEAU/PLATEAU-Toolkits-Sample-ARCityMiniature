@@ -14,7 +14,7 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
   - [1-3. 利用している PLATEAU SDK-Toolkits の機能](#1-2-利用している-PLATEAU-SDK-Toolkits-の機能)
 - [2. 利用手順](#2-利用手順)
   - [2-1. 推奨環境](#2-1-推奨環境)
-  - [2-2. サンプルシーンのビルド方法](#2-2-サンプルシーンのビルド方法)
+  - [2-2. サンプルプロジェクトのビルド方法](#2-2-サンプルプロジェクトのビルド方法)
   - [2-3. ビルドしたアプリケーションの操作方法](#2-3-ビルドしたアプリケーションの操作方法)
 - [3. サンプルプロジェクトのカスタマイズ方法](#3-サンプルプロジェクトのカスタマイズ方法)
   - [3-1. 任意のPLATEAU 3D都市モデルをインポートしたい場合](#3-1-任意のPLATEAU-3D都市モデルをインポートしたい場合)
@@ -54,7 +54,7 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 - Android 13
 - iOS 16.7.1
 
-## 2-2. サンプルシーンのビルド方法
+## 2-2. サンプルプロジェクトのビルド方法
 1. メニューより "File" > "Build Settings" を選択し Build Settings ウィンドウを表示します。
 <img width="600" alt="miniature_sample_05_projectview" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/7f4ad73c-0ec6-44ab-b718-692f77755783">
 
