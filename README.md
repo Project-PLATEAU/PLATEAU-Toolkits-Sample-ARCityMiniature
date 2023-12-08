@@ -1,16 +1,15 @@
 # PLATEAU-Toolkits-Sample-ARCityMiniature
-### PLATEAU-SDK-Toolkits-for-Unityを使ったサンプルアプリケーション
-
+PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 
 ### 更新履歴
 
-|  2023/12/13  |  AR City Miniature　初回リリース|
+|  2023/12/13  |  AR City Miniature 初回リリース|
 | :--- | :--- |
 
 
 # 目次
 
-- [1. サンプルシーンの概要](#1-サンプルシーンの概要)
+- [1. サンプルプロジェクトの概要](#1-サンプルプロジェクトの概要)
   * [1-1. 体験の概要](#1-1-体験の概要)
   * [1-2. Toolkitの利用機能](#1-2-toolkitの利用機能)
 - [2. 利用手順](#2-利用手順)
@@ -28,112 +27,103 @@
   * [4-5. ナブメッシュの作成と人の配置](#4-5-ナブメッシュの作成と人の配置)
  
 
-# 1. サンプルシーンの概要
-## 1-1. 体験の概要
-このサンプルシーンを使うことで、マーカーを使ったミニチュア都市モデルの表示を行うことができます。<br>
-テーブルトップでシティプランニングを行うようなユースケースを想定したアプリです。<br>
+# 1. サンプルプロジェクトの概要
+## 1-1. サンプルプロジェクトで体験できること
+- このサンプルプロジェクトでは端末のカメラを利用したARアプリケーションを体験することができます。
+- アプリケーションで読み取ったARマーカーの上にPLATEAU 3D都市モデルのミニチュアオブジェクトを表示します。
+- AR空間に表示したPLATEAU 3D都市モデルを用いて都市計画を行うユースケースなどを想定したアプリケーションです。
 
 
-## 1-2. Toolkitの利用機能
-### Rendering Toolkit
+## 1-2. Unityプロジェクト情報
+### Unity バージョン
+- Unity 2021.3.30f1
+
+### レンダリングパイプライン
+- URP (Universal Rendering Pipeline)
+
+## 1-2. 利用している PLATEAU SDK-Toolkits の機能
+### PLATEAU SDK Rendering Toolkit
 - 窓用の頂点カラー調整
 
-### AR Extensions
-- マーカーによる3D都市モデルの配置
-
 # 2. 利用手順
-## 2-1. 必要環境
-### OS環境
+## 2-1. 推奨環境
+### 参考開発環境
+以下は本プロジェクトに使用した開発環境です。
+
 - Windows11
 - macOS Ventura 13.2
 - Android 13
 - iOS 16.7.1
 
-### Unity Version
-- Unity 2021.3.31f1 (2023/10/10現在 2021 LTSバージョン)
-    - Unity 2021.3系であれば問題なく動作する見込みです。
-
-### Rendering Pipeline
-- URP
-
-HDRP, Built-in Rendering Pipelineでは動作しません。<br>
-
 ## 2-2. サンプルシーンのビルド方法
-①Assets/Scenes/Main.unityを開きます。<br>
-②メニューよりFile > Build Settingsを選択します。<br>
+1. メニューより File > Build Settings を選択し Build Settings ウィンドウを表示します。
 <img width="600" alt="miniature_sample_05_projectview" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_05_projectview.png">
 
-③PlatformがAndroidとiOS以外になっている場合は、AndroidもしくはiOSを選択して、画面下部にある「Switch Platform」ボタンを押下し、Platformを切り替えます。<br>
-
+2. プラットフォームがAndroidかiOS以外になっている場合は、アプリケーションを動作させる端末に合わせてプラットフォームを選択し、画面下部にある「Switch Platform」ボタンからプラットフォームを切り替えます。<br>
 
 <img width="600" alt="miniature_sample_07_switchplatform" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_07_switchplatform.png">
 
-④画面下部にある「Build」ボタンを押下します。<br>
-出力先を選択してビルドを開始します（iOSの場合はフォルダ、Androidの場合は.apkファイルもしくはAndroid Gradleプロジェクト）。
-
+3. Build Settings ウィンドウの画面下部にある「Build」ボタンを押下し、ビルドの出力先を選択してビルドを開始します。iOSの場合は Xcode プロジェクトフォルダ、Androidの場合は .apk ファイルもしくはAndroid Gradleプロジェクトを生成します。<br />
 ビルドが完了したら、各プラットフォームに合わせて端末へアプリケーションをインストールしてください。
 
 <img width="600" alt="miniature_sample_06_buildsettings" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_06_buildsettings.png">
 
 ## 2-3. ビルドしたアプリケーションの操作方法
-①ビルドしたアプリケーションを開くと、オープニング画面が表示されます。<br>
-「始めましょう」のボタンをタップすると、ARによるスキャン画面に遷移します。<br>
-
+1. ビルドしたアプリケーションを端末で開くと、オープニング画面が表示されます。<br>
+「始めましょう」のボタンをタップすると、ARマーカー読み取り画面に遷移します。<br>
 
 <img width="600" alt="miniature_sample_01_title" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_01_title.png">
 
-
-②マーカースキャン画面に遷移するとARカメラがオンになるので、対象となるマーカーをカメラでスキャンしてください。<br>
+2. ARマーカー読み取り画面で対象のARマーカーをカメラで読み取る（ARマーカーをカメラで写す）と、ARマーカー上にPLATEAU 3D都市モデルのミニチュアオブジェクトが表示されます。<br>
 
 <img width="600" alt="miniature_sample_02_markerscan" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_02_markerscan.png">
 
-
-するとミニチュアサイズの3D都市モデルが表示されます。
-
 <img width="600" alt="miniature_sample_miniature_app" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_miniature_app.png">
 
-③画面右側に表示されるスケールバーを調整すると、3D都市モデルの大きさを変更することができます。<br>
-画面右側に表示される回転バーを調整すると、3D都市モデルを回転することができます。<br>
+3. ミニチュアオブジェクトを表示すると、画面上にミニチュアオブジェクトを操作することのできるUIが表示されます。画面右側に表示されるスケールバーを調整することで3D都市モデルの大きさを変更することができ、画面下側に表示される回転バーを調整すると、3D都市モデルを回転させることができます。
 
+# 3. サンプルプロジェクトのカスタマイズ方法
+本サンプルプロジェクトを元に、表示させる3D都市モデルの変更などを行いたい場合は以下を参考にサンプルプロジェクトに改変を加えて利用してください。
 
-# 3. サンプルシーンのカスタマイズ方法
-## 3-1. 自分でPLATEAUモデルをインポートしたい時
+## 3-1. 任意のPLATEAU 3D都市モデルをインポートしたい場合
 
-①PLATEAU SDKを使って、サンプルシーン内に3D都市モデルをインポートします。<br>
-モバイルアプリ向けの3D都市モデルの最適化の手順については次章の[4. サンプルミニチュア都市モデルのメイキング](#4-サンプルミニチュア都市モデルのメイキング)をご参照ください。
+1. PLATEAU SDKを使って、サンプルシーン内に3D都市モデルをインポートします。
+    - モバイル端末上で3D都市モデルを表示する場合は、大きさなどによって最適化が必要になる場合があります。モバイルアプリ向けの3D都市モデルの最適化の手順については次章の [4. サンプルミニチュア都市モデルのメイキング](#4-サンプルミニチュア都市モデルのメイキング) を参照してください。
 
-②ヒエラルキーに３D都市モデルを追加したら, prefabを作成します。<br>
-Project内の任意のフォルダにドラッグアンドドロップするとprefabを作成することができます。<br>
-prefabの名前は任意です。（Sampleの例だと"MiniatureCityModels"としています。）
+2. インポートの完了後、PLATEAU SDK を使用し、インポートした3D都市モデルを FBX ファイルとしてプロジェクトに保存します。
+
+3. シーン上に新規のゲームオブジェクトを作成し、その中に保存した FBX ファイルをドラッグアンドドロップで子オブジェクトとして追加します。
+    - このオブジェクトがARマーカー上に表示される3D都市モデルオブジェクトの本体になります。
+    - 分かりやすさのため、ゲームオブジェクトはインポートした場所の名前などを設定してください。
+
+3. 作成したゲームオブジェクトをもとにプレハブを作成します。
+    - ヒエラルキーからプロジェクト内の任意のフォルダにゲームオブジェクトをドラッグアンドドロップすることでプレハブを作成することができます。
+
+4. プロジェクトから "Assets/Prefabs/MiniatureCityModels" を選択し、"MiniatureCityModels" プレハブのインスペクターを開きます。
+
+5. `City Models` フィールド内の `City Model Prefab` に作成したプレハブを設定してください。
 
 <img width="600" alt="miniature_sample_makeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_makeprefab.png">
 
-③Prefabを作成したらマーカー上に表示するための設定をします。シーン中にあるAR Session Originを選択し、アタッチされている"AR Tracked Image Manager"のTracked Image Prefab"のPrefabを作成したPrefabに入れ替えます。<br>
 
-<img width="600" alt="miniature_sample_arsession_pos" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_arsession_pos.png">
+## 3-2. ARマーカーに使用する画像を変更したい場合
 
-
-<img width="600" alt="miniature_sample_makeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_imageprefab.png">
-
-
-## 3-2. 自分で作ったマーカーを入れたいとき
-
-①用意したマーカーの画像データをProject内に配置します。エクスプローラーからUnityのProject内の任意のフォルダにドラッグアンドドロップすると追加することができます。<br>
-サンプルでは/Assets/Imagesの中にARMarkerImage.pngが格納されています。<br>
+1. 用意したマーカーの画像データをProject内に配置します。エクスプローラーからUnityのProject内の任意のフォルダにドラッグアンドドロップすると追加することができます。
+    - サンプルでは "/Assets/Images" の中に "ARMarkerImage.png" が格納されています。
 
 <img width="600" alt="miniature_sample_markerpath" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_markerpath.png">
 
-②インポートした画像をARマーカーとして登録します。<br>
-/Assets/の中にあるReferencedImageLibraryを選択し、画像を入れ替えます。
+2. インポートした画像をARマーカーとして登録します。
+    - "/Assets" の中にある "ReferencedImageLibrary" を選択してインスペクターを表示し、画像を入れ替えます。
+    - TODO: 大きさの設定
+    - 登録すると指定したマーカーをスキャンしたときに対象オブジェクトが表示されるようになります。 TODO: ARマーカーの指定が必要
 <img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_reflibpath.png">
 
 <img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_reflib_before.png">
 
+# 4. サンプルプロジェクトで使用しているミニチュア3D都市モデルの構成
+ここでは、サンプルプロジェクトで用意している3D都市モデルについて紹介します。
 
-
-登録すると指定したマーカーをスキャンしたときに対象オブジェクトが表示されるようになります。
-
-# 4. サンプルミニチュア3D都市モデルのメイキング
 モバイルアプリで3D都市モデルを使用する際には、3D都市モデルを最適化することでパフォーマンスを向上できます。<br>
 また、カラーの設定を行うことでモデルの審美性を高めることができます。<br>
 具体的な手順は以下の通りです。<br>
