@@ -73,7 +73,7 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 
 2. ARマーカー読み取り画面で対象のARマーカーをカメラで読み取る（ARマーカーをカメラで写す）と、ARマーカー上にPLATEAU 3D都市モデルのミニチュアオブジェクトが表示されます。<br>
 
-<img width="600" alt="miniature_sample_02_markerscan" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/db7e55b0-3ee8-4899-8a28-f41ba183f364">
+<img width="600" alt="miniature_sample_02_markerscan" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/blob/manual/images/SampleSceneReadmeImages/ARCityMiniature/AR-marker-recognition.jpg">
 
 <img width="600" alt="miniature_sample_miniature_app" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/8748d204-6f08-4299-8fdc-286cee92a209">
 
