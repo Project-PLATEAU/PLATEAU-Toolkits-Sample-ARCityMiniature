@@ -61,36 +61,40 @@ HDRP, Built-in Rendering Pipelineでは動作しません。<br>
 ## 2-2. サンプルシーンのビルド方法
 ①Assets/Scenes/Main.unityを開きます。<br>
 ②メニューよりFile > Build Settingsを選択します。<br>
-<img width="600" alt="miniature_sample_05_projectview" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_05_projectview.png">
+
+<img width="600" alt="miniature_sample_05_projectview" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/7f4ad73c-0ec6-44ab-b718-692f77755783">
+
 
 ③PlatformがAndroidとiOS以外になっている場合は、AndroidもしくはiOSを選択して、画面下部にある「Switch Platform」ボタンを押下し、Platformを切り替えます。<br>
 
+<img width="600" alt="miniature_sample_07_switchplatform" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/15b2282e-a2c9-44eb-8ac9-30612d191d16">
 
-<img width="600" alt="miniature_sample_07_switchplatform" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_07_switchplatform.png">
 
 ④画面下部にある「Build」ボタンを押下します。<br>
 出力先を選択してビルドを開始します（iOSの場合はフォルダ、Androidの場合は.apkファイルもしくはAndroid Gradleプロジェクト）。
 
 ビルドが完了したら、各プラットフォームに合わせて端末へアプリケーションをインストールしてください。
 
-<img width="600" alt="miniature_sample_06_buildsettings" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_06_buildsettings.png">
+<img width="600" alt="miniature_sample_06_buildsettings" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/44656cdd-a094-4b31-89a3-cf2b76b19089">
+
 
 ## 2-3. ビルドしたアプリケーションの操作方法
 ①ビルドしたアプリケーションを開くと、オープニング画面が表示されます。<br>
 「始めましょう」のボタンをタップすると、ARによるスキャン画面に遷移します。<br>
 
 
-<img width="600" alt="miniature_sample_01_title" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_01_title.png">
+<img width="600" alt="miniature_sample_01_title" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/292f15c3-1b9c-47d6-ab53-956dd3c7d85d">
 
 
 ②マーカースキャン画面に遷移するとARカメラがオンになるので、対象となるマーカーをカメラでスキャンしてください。<br>
 
-<img width="600" alt="miniature_sample_02_markerscan" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_02_markerscan.png">
+<img width="600" alt="miniature_sample_02_markerscan" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/db7e55b0-3ee8-4899-8a28-f41ba183f364">
+
 
 
 するとミニチュアサイズの3D都市モデルが表示されます。
 
-<img width="600" alt="miniature_sample_miniature_app" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_miniature_app.png">
+<img width="600" alt="miniature_sample_miniature_app" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/8748d204-6f08-4299-8fdc-286cee92a209">
 
 ③画面右側に表示されるスケールバーを調整すると、3D都市モデルの大きさを変更することができます。<br>
 画面右側に表示される回転バーを調整すると、3D都市モデルを回転することができます。<br>
@@ -106,7 +110,10 @@ HDRP, Built-in Rendering Pipelineでは動作しません。<br>
 Project内の任意のフォルダにドラッグアンドドロップするとprefabを作成することができます。<br>
 prefabの名前は任意です。（Sampleの例だと"MiniatureCityModels"としています。）
 
-<img width="600" alt="miniature_sample_makeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_makeprefab.png">
+
+<img width="600" alt="miniature_sample_makeprefab" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/341a86a3-12b0-43cf-8052-7a45e210af2b">
+
+
 
 ③Prefabを作成したらマーカー上に表示するための設定をします。シーン中にあるAR Session Originを選択し、アタッチされている"AR Tracked Image Manager"のTracked Image Prefab"のPrefabを作成したPrefabに入れ替えます。<br>
 
@@ -121,13 +128,18 @@ prefabの名前は任意です。（Sampleの例だと"MiniatureCityModels"と�
 ①用意したマーカーの画像データをProject内に配置します。エクスプローラーからUnityのProject内の任意のフォルダにドラッグアンドドロップすると追加することができます。<br>
 サンプルでは/Assets/Imagesの中にARMarkerImage.pngが格納されています。<br>
 
-<img width="600" alt="miniature_sample_markerpath" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_markerpath.png">
+
+<img width="600" alt="miniature_sample_markerpath" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/98328083-8e52-4f03-9ecb-f9f85b2196c9">
+
 
 ②インポートした画像をARマーカーとして登録します。<br>
 /Assets/の中にあるReferencedImageLibraryを選択し、画像を入れ替えます。
-<img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_reflibpath.png">
 
-<img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_reflib_before.png">
+
+<img width="600" alt="miniature_sample_reflibpath" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/e23457b7-4b5f-4e14-83c1-0d1c06e5c540">
+
+
+<img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/9174f57e-d0c6-4ee5-afaf-9fd86b39d291">
 
 
 
@@ -152,26 +164,27 @@ Plateauモデルをプレハブ化する最初のステップは、モデルを�
 ##### SDKのエクスポート機能の利用
 PLATEAUSDKのエクスポート機能を使用することで、CityGMLからFBXやGLTFなどのフォーマットにエクスポートすることが可能です。シーンに埋め込まれているテクスチャも外部ファイルとして出力できます。注意点としてはCityGMLから直接変換するため、Unityで選択した範囲での出力やUnity内でメッシュに対して行われた変更は出力できません。
 
-<img width="400" alt="miniature_sample_plateausdk_export_options" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_plateausdk_export_options.png">
+<img width="400" alt="miniature_sample_plateausdk_export_options" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/0184b22e-856d-4bd9-9665-9774773c9989">
 <br>
 
 ##### Unity公式FBXエクスポーターの利用
 Unity公式のFBXエクスポーターを使用すると、Unityで選択したオブジェクトや、Unityで行った変更を含めたモデルの出力が可能になります。この方法では、頂点カラーのペイントやメッシュのマージなど、Unityで加工されたデータをそのまま出力できます。ただし、シーンに埋め込まれたテクスチャはこの方法では出力されないため、建物のテクスチャを出力する場合はSDKのエクスポート機能を使用する必要があります。
 
-<img width="600" alt="miniature_sample_fbxexporter_selection" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_fbxexporter_selection.png">
 
-<img width="600" alt="miniature_sample_fbxexporter_settings" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_fbxexporter_settingss.png">
+<img width="600" alt="miniature_sample_fbxexporter_selection" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/fff65e52-6afa-4cf0-8bf5-3392e7859206">
+
+<img width="600" alt="miniature_sample_fbxexporter_settings" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/3ba14f7f-3e65-4745-ae7c-3c910e57fd52">
 <br>
 
 ## 4-2. モバイルデバイスをターゲットにしたミニチュア3D都市モデルの作成
  **アートスタイルの選定**: 今回のサンプル作成においては、シンプルかつスタイリッシュな都市模型風のアートスタイルを採用しました。
  
-<img width="600" alt="miniature_sample_artstyle" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_artstyle.png">
+<img width="600" alt="miniature_sample_artstyle" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/cf86a7ed-d3be-4623-9b0a-727cd93fbf30">
 <br>
  
 **頂点カラーの活用**: 頂点カラーを応用したグラフィック表現はモバイルデバイス上でのパフォーマンスを維持しつつ、リッチなビジュアル表現を加えるための確立された手法です。各頂点にカラーデータを割り当て、シェーダーを介することで多様な表現を行うことが可能です。
 
-<img width="600" alt="miniature_sample_vertexcolor_result" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_vertexcolor_result.png">
+<img width="600" alt="miniature_sample_vertexcolor_result" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/a1624ed3-d81f-4a4c-b834-035b15fb46e9">
 <br>
 
  **ポリゴン数と最適化**: ポリゴン数の管理は、モバイルアプリケーションのパフォーマンスに直接関係します。建物のモデルにおいては、幅広いモバイル端末での動作を考慮し、約15万トライアングルを目安にしました。
