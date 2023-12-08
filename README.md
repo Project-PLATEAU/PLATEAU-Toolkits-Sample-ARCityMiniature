@@ -108,15 +108,21 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 
 ## 3-2. ARマーカーに使用する画像を変更したい場合
 
-1. 用意したマーカーの画像データをProject内に配置します。エクスプローラーからUnityのProject内の任意のフォルダにドラッグアンドドロップすると追加することができます。
+1. 用意したマーカーの画像ファイルをプロジェクトに追加します。
+    - UnityではOSのファイルシステム（Windows エクスプローラー / macOS Finder）からUnityエディタのプロジェクト内の任意のフォルダに画像ファイルをドラッグアンドドロップすることでアセットをインポートできます。
     - サンプルでは "/Assets/Images" の中に "ARMarkerImage.png" が格納されています。
 
 <img width="600" alt="miniature_sample_markerpath" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_markerpath.png">
 
 2. インポートした画像をARマーカーとして登録します。
-    - "/Assets" の中にある "ReferencedImageLibrary" を選択してインスペクターを表示し、画像を入れ替えます。
-    - TODO: 大きさの設定
-    - 登録すると指定したマーカーをスキャンしたときに対象オブジェクトが表示されるようになります。 TODO: ARマーカーの指定が必要
+    - "/Assets" の中にある "ReferencedImageLibrary" を選択してインスペクターを表示し、 "Add Image" を押下してARマーカー画像データを追加します。
+    - プロジェクトにインポートした画像アセットをARマーカーのテクスチャに設定します。
+    - ARマーカー名はファイル名から自動で設定されますが、任意の名前を設定することが可能です。
+    - ARマーカー画像は現実空間に配置する大きさをメートル単位で指定する必要があります。印刷するARマーカー画像の大きさなどに合わせて大きさを設定してください。
+    - "Assets/Prefabs/MiniatureCityModels" のインスペクタから、追加したARマーカーに紐付ける `City Models` の `ARMarkerName` に設定したARマーカー名を指定してください。
+
+3. Unity プロジェクトをビルドし、用意したARマーカーを読み取ると、紐づけられた3D都市モデルオブジェクトが表示されます。
+
 <img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_reflibpath.png">
 
 <img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_reflib_before.png">
