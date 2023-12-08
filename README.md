@@ -56,7 +56,7 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 
 ## 2-2. サンプルプロジェクトのビルド方法
 1. メニューより "File" > "Build Settings" を選択し Build Settings ウィンドウを表示します。
-<img width="600" alt="miniature_sample_05_projectview" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/7f4ad73c-0ec6-44ab-b718-692f77755783">
+<img width="600" alt="miniature_sample_05_projectview" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/blob/manual/images/SampleSceneReadmeImages/ARCityMiniature/miniature_sample_05_projectview.png">
 
 2. プラットフォームがAndroidかiOS以外になっている場合は、アプリケーションを動作させる端末に合わせてプラットフォームを選択し、画面下部にある「Switch Platform」ボタンからプラットフォームを切り替えます。<br>
 
