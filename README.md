@@ -117,10 +117,12 @@ prefabの名前は任意です。（Sampleの例だと"MiniatureCityModels"と�
 
 ③Prefabを作成したらマーカー上に表示するための設定をします。シーン中にあるAR Session Originを選択し、アタッチされている"AR Tracked Image Manager"のTracked Image Prefab"のPrefabを作成したPrefabに入れ替えます。<br>
 
-<img width="600" alt="miniature_sample_arsession_pos" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_arsession_pos.png">
+
+<img width="600" alt="miniature_sample_arsession_pos" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/5bef215c-c7ad-485d-a093-9f291ca05b52">
 
 
 <img width="600" alt="miniature_sample_makeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_imageprefab.png">
+
 
 
 ## 3-2. 自分で作ったマーカーを入れたいとき
@@ -189,37 +191,46 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 
  **ポリゴン数と最適化**: ポリゴン数の管理は、モバイルアプリケーションのパフォーマンスに直接関係します。建物のモデルにおいては、幅広いモバイル端末での動作を考慮し、約15万トライアングルを目安にしました。
 
-<img width="600" alt="miniature_sample_triangle_count" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_triangle_count.png">
+
+<img width="600" alt="miniature_sample_triangle_count" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/7075432e-9567-4faf-a7ea-476ab22e379d">
 <br>
 
  **頂点カラーのペイント**: 今回のサンプルでは、RenderingToolkitの窓の頂点カラーマスク調整機能を使用し、ビルに頂点カラーを一括で割り当てました。
- 
-<img width="600" alt="miniature_sample_vertexcolor_painting" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_vertexcolor_painting.png">
+
+
+
+<img width="600" alt="miniature_sample_vertexcolor_painting" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/f0932a41-1c36-4ae0-a1c6-c65c6bb301df">
 <br>
 
  **頂点カラーGチャンネル**: グリーンチャンネルは、地物のバウンディングボックスの底から頂上に向かって、白から黒へのグラデーションが塗られています。
 
-<img width="600" alt="miniature_sample_green_channel" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_green_channel.png">
+
+<img width="600" alt="miniature_sample_green_channel" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/aa750068-15ee-444d-8ad7-a4d386ce5761">
 <br>
 
 **頂点カラーAチャンネル**: アルファチャンネルは、地物ごとにランダムに割り当てられます。ランダムな値を設定することで、多様な表現を行うことができます。例えば、カラーグラデーションをシェーダーグラフを介して頂点アルファにマッピングすることで、カラフルな街が簡単に作成できます。
 
-<img width="600" alt="miniature_sample_alpha_random" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_alpha_random.png">
 
-<img width="600" alt="miniature_sample_shadergraph_mapping" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_shadergraph_mapping.png">
+<img width="600" alt="miniature_sample_alpha_random" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/14a98e2f-29b4-4b3e-9bd4-0e6e65aac595">
 
-<img width="600" alt="miniature_sample_gradation_mapping" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_gradation_mapping.png">
+
+<img width="600" alt="miniature_sample_shadergraph_mapping" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/db8be143-77ae-4888-9b65-34669315f9f9">
+
+
+<img width="600" alt="miniature_sample_gradation_mapping" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/ed97e5c1-560d-40c2-b7bd-c40f10df9f39">
 <br>
 
 ## 4-3. モデルの加工と出力
 **地物の高さの調整とメッシュのマージ**: モデルの加工には地物の高さを揃える工程とメッシュのマージが含まれます。これらの工程は、MiniatureViewerメニュー内にある専用のツールを介して行われます。これにより、モデルは一貫性のある外観と最適化されたメッシュ構造を獲得します。
 
-<img width="600" alt="miniature_sample_merge_mesh" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_merge_mesh.png">
+<img width="600" alt="miniature_sample_merge_mesh" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/317fc81b-f33b-4fbc-a5ed-4be0aeb33faf">
+
 <br>
 
  **FBXエクスポーターでの出力**: 加工が完了したモデルはFBXエクスポーターを使用してFBXフォーマットで出力します。ヒエラルキーでエクスポートするゲームオブジェクト選択後、左クリック > Export To FBX。
  
-<img width="400" alt="miniature_sample_rightclick_export_fbx" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_rightclick_export_fbx.png">
+<img width="400" alt="miniature_sample_rightclick_export_fbx" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/f9d2f7fa-14e5-4924-bc7c-5d709d375ae">
+
 <br>
 
 ## 4-4. ライトマップの適用
