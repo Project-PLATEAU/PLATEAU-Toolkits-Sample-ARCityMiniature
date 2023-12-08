@@ -1,11 +1,10 @@
 # PLATEAU-Toolkits-Sample-ARCityMiniature
 PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 
-### 更新履歴
+## 更新履歴
 
 |  2023/12/13  |  AR City Miniature 初回リリース|
 | :--- | :--- |
-
 
 # 目次
 
@@ -56,12 +55,12 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 - iOS 16.7.1
 
 ## 2-2. サンプルシーンのビルド方法
-1. メニューより File > Build Settings を選択し Build Settings ウィンドウを表示します。
+1. メニューより "File" > "Build Settings" を選択し Build Settings ウィンドウを表示します。
 <img width="600" alt="miniature_sample_05_projectview" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/7f4ad73c-0ec6-44ab-b718-692f77755783">
 
 2. プラットフォームがAndroidかiOS以外になっている場合は、アプリケーションを動作させる端末に合わせてプラットフォームを選択し、画面下部にある「Switch Platform」ボタンからプラットフォームを切り替えます。<br>
 
-3. Build Settings ウィンドウの画面下部にある「Build」ボタンを押下し、ビルドの出力先を選択してビルドを開始します。iOSの場合は Xcode プロジェクトフォルダ、Androidの場合は .apk ファイルもしくはAndroid Gradleプロジェクトを生成します。<br />
+3. Build Settings ウィンドウの画面下部にある「Build」ボタンを押下し、ビルドの出力先を選択してビルドを開始します。iOSの場合は Xcode プロジェクト、Androidの場合は .apk ファイルもしくはAndroid Gradleプロジェクトを生成します。<br />
 ビルドが完了したら、各プラットフォームに合わせて端末へアプリケーションをインストールしてください。
 
 <img width="600" alt="miniature_sample_07_switchplatform" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/15b2282e-a2c9-44eb-8ac9-30612d191d16">
@@ -78,14 +77,15 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 
 <img width="600" alt="miniature_sample_miniature_app" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/8748d204-6f08-4299-8fdc-286cee92a209">
 
-3. ミニチュアオブジェクトを表示すると、画面上にミニチュアオブジェクトを操作することのできるUIが表示されます。画面右側に表示されるスケールバーを調整することで3D都市モデルの大きさを変更することができ、画面下側に表示される回転バーを調整すると、3D都市モデルを回転させることができます。
+3. ミニチュアオブジェクトを表示すると、画面上にミニチュアオブジェクトを操作できるUIが表示されます。画面右側に表示されるスケールバーを調整することで3D都市モデルの大きさを変更することができ、画面下側に表示される回転バーを調整すると、3D都市モデルを回転させることができます。
 
 # 3. サンプルプロジェクトのカスタマイズ方法
-本サンプルプロジェクトを元に、表示させる3D都市モデルの変更などを行いたい場合は以下を参考にサンプルプロジェクトに改変を加えて利用してください。
+本サンプルプロジェクトを元に、表示させる3D都市モデルの変更などを行いたい場合は以下を参考にサンプルプロジェクトを改変して利用してください。
 
 ## 3-1. 任意のPLATEAU 3D都市モデルをインポートしたい場合
 
-1. PLATEAU SDKを使って、サンプルシーン内に3D都市モデルをインポートします。
+1. PLATEAU SDKを使って、任意のシーン内に3D都市モデルをインポートします。
+    - 以降の手順では一時的に3D都市モデルをシーンにインポートしてFBXに変換します。
     - モバイル端末上で3D都市モデルを表示する場合は、大きさなどによって最適化が必要になる場合があります。モバイルアプリ向けの3D都市モデルの最適化の手順については次章の [4. サンプルミニチュア都市モデルのメイキング](#4-サンプルミニチュア都市モデルのメイキング) を参照してください。
 
 2. インポートの完了後、PLATEAU SDK を使用し、インポートした3D都市モデルを FBX ファイルとしてプロジェクトに保存します。
@@ -110,7 +110,7 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 
 ## 3-2. ARマーカーに使用する画像を変更したい場合
 
-1. 用意したマーカーの画像ファイルをプロジェクトに追加します。
+1. 用意したARマーカーの画像ファイルをプロジェクトに追加します。
     - UnityではOSのファイルシステム（Windows エクスプローラー / macOS Finder）からUnityエディタのプロジェクト内の任意のフォルダに画像ファイルをドラッグアンドドロップすることでアセットをインポートできます。
     - サンプルでは "/Assets/Images" の中に "ARMarkerImage.png" が格納されています。
 
@@ -132,7 +132,7 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 <img width="600" alt="miniature_sample_reflib_before" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/9174f57e-d0c6-4ee5-afaf-9fd86b39d291">
 
 # 4. サンプルプロジェクトで使用しているミニチュア3D都市モデルの構成手順
-ここでは、サンプルプロジェクトで用意している3D都市モデルの構成手順について紹介します。サンプルプロジェクトに予め用意された3D都市モデル以外の3D都市モデルを導入する際に、同じような演出を行いたい場合は以下の手順を参考にアセットを作成してください。
+ここでは、サンプルプロジェクトで用意している3D都市モデルの構成手順について紹介します。任意の3D都市モデルを導入して同じような演出を行いたい場合は以下の手順を参考にアセットを作成してください。
 
 主にサンプルプロジェクトでは以下のような調整を3D都市モデルに実装しています。
 - モバイル端末でも快適に動作するように3D都市モデルを最適化しています。
@@ -140,50 +140,45 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 - 臨場感のある3D都市モデルを演出するために、ナビゲーション ([ナビメッシュ](https://docs.unity3d.com/ja/2021.3/Manual/nav-Buildingナビメッシュ.html)) を導入して都市を移動するアバターを追加しています。
 
 ## 4-1. 3D都市モデルのプレハブ化
-- **SDKのエクスポート機能による出力**: CityGMLからFBXやGLTFへのエクスポート
-- **UnityのFBX Exporterによる出力**: 選択したメッシュのエクスポート
 
-### 3D都市都市モデルのプレハブ化
-#### サンプルプロジェクトと3D都市モデル
-サンプルプロジェクトでは、ARマーカーを読み取ると対応するオブジェクトが表示されます。一般的には、これらのオブジェクトをプレハブとして準備する必要があります。インポートされたPLATEAU 3D都市モデルはシーン上にメッシュなどのデータを保持しているため、プレハブ化するためには以下の手順に従う必要があります。
+3D都市モデルをプレハブ化するためには、以下のような機能を利用することで3D都市モデルのプレハブを作成することができます。
 
-#### 3D都市モデルの汎用3Dファイルへのエクスポート
+- **PLATEAU SDK**: シーンにインポートした3D都市モデルのからFBXやGLTFへのエクスポート
+- **Unity公式FBXエクスポーター**: シーン上で選択したメッシュのエクスポート
+
+### サンプルプロジェクトと3D都市モデル
+サンプルプロジェクトでは、ARマーカーを読み取ると対応するオブジェクトが表示されます。サンプルプロジェクトの構成では、これらのオブジェクトをプレハブとして準備する必要があります。インポートされたPLATEAU 3D都市モデルはシーン上にメッシュなどのデータを保持しているため、プレハブ化するためには以下の手順に従う必要があります。
+
+### 3D都市モデルの汎用3Dファイルへのエクスポート
 PLATEAU 3D都市モデルをプレハブ化する最初のステップは、モデルを汎用的な3Dデータ形式へと変換することです。この変換には複数の方法があり、以下にいくつかの主要なエクスポート方法を挙げます。
 
-##### SDKのエクスポート機能の利用
-PLATEAU SDKのエクスポート機能を使用することで、CityGMLからFBXやGLTFなどのフォーマットにエクスポートすることが可能です。シーンに埋め込まれているテクスチャも外部ファイルとして出力できます。注意点としてはインポートされたCityGMLから直接変換を行うため、Unityのヒエラルキー上で選択した範囲での出力やシーン上ででメッシュに対して行われた変更は出力できません。
+#### PLATEAU SDKのエクスポート機能の利用
+PLATEAU SDKのエクスポート機能を使用することで、シーンにインポートした3D都市モデルオブジェクトからFBXやGLTFなどのフォーマットでプレハブをエクスポートすることが可能です。この際、シーンに埋め込まれているテクスチャも外部ファイルとして出力できます。ただし、インポートされた3D都市モデルの持つCityGMLを元に変換を行うため、Unityのヒエラルキー上で選択した範囲での出力やシーン上ででメッシュに対して行われた変更は出力できません。
 
 <img width="400" alt="miniature_sample_plateausdk_export_options" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/0184b22e-856d-4bd9-9665-9774773c9989">
-<br>
 
-##### Unity公式FBXエクスポーターの利用
-Unity公式のFBXエクスポーターを使用すると、Unityで選択したオブジェクトや、Unityで行った変更を含めたモデルの出力が可能になります。この方法では、頂点カラーのペイントやメッシュのマージなど、Unityで加工されたデータをそのまま出力できます。ただし、シーンに埋め込まれたテクスチャはこの方法では出力されないため、建物のテクスチャを出力する場合はSDKのエクスポート機能を使用する必要があります。
-
+#### Unity公式FBXエクスポーターの利用
+Unity公式のFBXエクスポーターを使用すると、Unityで選択したオブジェクトや、Unityで行った変更を含めたモデルの出力が可能になります。この方法では、頂点カラーのペイントやメッシュのマージなど、Unityで加工されたデータをそのまま出力できます。ただし、シーンに埋め込まれたテクスチャはこの方法では出力されないため、建物のテクスチャを出力する場合はPLATEAU SDKのエクスポート機能を使用する必要があります。
 
 <img width="600" alt="miniature_sample_fbxexporter_selection" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/fff65e52-6afa-4cf0-8bf5-3392e7859206">
 
 <img width="600" alt="miniature_sample_fbxexporter_settings" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/3ba14f7f-3e65-4745-ae7c-3c910e57fd52">
-<br>
 
 ## 4-2. モバイル端末を対象にした3D都市モデルの作成
 ### アートスタイルの選定
 今回のサンプル作成では、シンプルかつスタイリッシュな都市模型風のアートスタイルを採用しました。
  
 <img width="600" alt="miniature_sample_artstyle" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/cf86a7ed-d3be-4623-9b0a-727cd93fbf30">
-<br>
  
 ### 頂点カラーの活用
 頂点カラーを応用したグラフィック表現はモバイル端末上でのパフォーマンスを維持しつつ、リッチなビジュアル表現を加えるための確立された手法です。各頂点にカラーデータを割り当て、シェーダーを介して多様な表現を行うことが可能です。
 
 <img width="600" alt="miniature_sample_vertexcolor_result" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/a1624ed3-d81f-4a4c-b834-035b15fb46e9">
-<br>
 
 ### ポリゴン数と最適化
 ポリゴン数の管理はモバイルアプリケーションのパフォーマンスに直接関係します。建物のモデルにおいては、幅広いモバイル端末での動作を考慮し、約15万トライアングルを目安にしました。
 
-
 <img width="600" alt="miniature_sample_triangle_count" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/7075432e-9567-4faf-a7ea-476ab22e379d">
-<br>
 
 ### 頂点カラーのペイント
 今回のサンプルでは、RenderingToolkitの窓の頂点カラーマスク調整機能を使用し、ビルに頂点カラーを一括で割り当てました。
@@ -193,13 +188,10 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 ### 頂点カラーGチャンネル
 グリーンチャンネルは、地物のバウンディングボックスの底から頂上に向かって、白から黒へのグラデーションが塗られています。
 
-
 <img width="600" alt="miniature_sample_green_channel" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/aa750068-15ee-444d-8ad7-a4d386ce5761">
-<br>
 
 ### 頂点カラーAチャンネル
 アルファチャンネルは地物ごとにランダムに割り当てられます。ランダムな値を設定することで、多様な表現を行うことができます。例えば、カラーグラデーションをシェーダーグラフを介して頂点アルファにマッピングすることで、カラフルな街が簡単に作成できます。
-
 
 <img width="600" alt="miniature_sample_alpha_random" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/14a98e2f-29b4-4b3e-9bd4-0e6e65aac595">
 
@@ -208,7 +200,6 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 
 
 <img width="600" alt="miniature_sample_gradation_mapping" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/ed97e5c1-560d-40c2-b7bd-c40f10df9f39">
-<br>
 
 ## 4-3. モデルの加工と出力
 ### 地物の高さの調整とメッシュのマージ
@@ -216,14 +207,10 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 
 <img width="600" alt="miniature_sample_merge_mesh" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/317fc81b-f33b-4fbc-a5ed-4be0aeb33faf">
 
-<br>
-
 ### FBXエクスポーターでの出力
 加工が完了したモデルはUnity FBXエクスポーターを使用してFBXフォーマットで出力します。ヒエラルキーからエクスポートするゲームオブジェクトを右クリックし、"Export To FBX" を選択します。
  
 <img width="400" alt="miniature_sample_rightclick_export_fbx" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/f9d2f7fa-14e5-4924-bc7c-5d709d375ae">
-
-<br>
 
 ## 4-4. ライトマップの適用
 
@@ -239,13 +226,11 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 
 <img width="600" alt="miniature_sample_lightmap_uv" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_uv.png">
 <img width="600" alt="miniature_sample_lightmap_static" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_static.png">
-<br>
 
 ### ライトマップベイクの実行
 ベイクする準備が完了したらライティング設定からライトマップをベイクします。以下の画像はサンプルプロジェクトで用意しているライトマップの設定です。
 
 <img width="600" alt="miniature_sample_lightmap_settings" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_settings.png">
-<br>
 
 ### プレハブへのライトマップ適用
 Unityのライトマップはシーン上のオブジェクトを対象としているため標準機能ではプレハブにライトマップを適用する機能はありませんが、拡張スクリプトを作成してプレハブにライトマップの情報を保存することが可能です。この手順により、異なるシーンでベイクされたライティング情報をのオブジェクトを一つのシーンで使うことができます。
@@ -254,7 +239,6 @@ Unityのライトマップはシーン上のオブジェクトを対象として
 <img width="600" alt="miniature_sample_lightmap_component" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_component.png">
 
 <img width="600" alt="miniature_sample_lightmap_bakeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_bakeprefab.png">
-<br>
 
 ## 4-5. ナビメッシュの作成と人の配置
 ### ナビメッシュ追加パッケージのインストール
@@ -270,16 +254,13 @@ Unityのライトマップはシーン上のオブジェクトを対象として
 <img width="600" alt="miniature_sample_ナビメッシュ_surface_component" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_ナビメッシュ_surface_component.png">
 
 <img width="600" alt="miniature_sample_lightmap_bakeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_bakeprefab.png">
-<br>
 
 ### サンプルプロジェクトに合わせたナビメッシュ調整
 ARでは3D都市モデル全体のスケーリングや回転等の機能が実装されていますが、通常のナビメッシュはこれらに対応していません。専用のカスタムコンポーネントを追加することで、固定位置のナビメッシュからアプリケーション上の3D都市モデルミニチュアオブジェクト上でスポーンするすべてのアバターにトランスフォームの再マッピングを行います。
   
 <img width="600" alt="miniature_sample_ナビメッシュ_transform_remapping" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_ナビメッシュ_transform_remapping.png">
-<br>
 
 #### 人の配置
 ナビメッシュ上に人のモデルを配置し、AR環境内でのリアルタイムインタラクションを提供します。これにより、都市モデルがより現実的で臨場感のあるものになります。
 
 <img width="600" alt="miniature_sample_ナビメッシュ_human" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_ナビメッシュ_human.png">
- <br>
