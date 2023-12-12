@@ -211,8 +211,8 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 ### FBXエクスポーターでの出力
 加工が完了したモデルはUnity FBXエクスポーターを使用してFBXフォーマットで出力します。ヒエラルキーからエクスポートするゲームオブジェクトを右クリックし、"Export To FBX" を選択します。
  
-<img width="400" alt="miniature_sample_rightclick_export_fbx" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/f9d2f7fa-14e5-4924-bc7c-5d709d375ae">
-![image](https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/127069970/77903075-2074-4277-a886-1f17a9a3c63e)
+<img width="400" alt="miniature_sample_rightclick_export_fbx" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/127069970/77903075-2074-4277-a886-1f17a9a3c63e">
+
 
 ## 4-4. ライトマップの適用
 
