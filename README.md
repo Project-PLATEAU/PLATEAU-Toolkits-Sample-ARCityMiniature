@@ -163,6 +163,8 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 <img width="600" alt="miniature_sample_fbxexporter_selection" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/fff65e52-6afa-4cf0-8bf5-3392e7859206">
 
 <img width="600" alt="miniature_sample_fbxexporter_settings" src="https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/137732437/3ba14f7f-3e65-4745-ae7c-3c910e57fd52">
+![image](https://github.com/unity-shimizu/PLATEAU-Toolkits-Sample-ARCityMiniature/assets/127069970/4aeeb72b-b3fa-4bee-a156-ebda640cc19d)
+
 
 ## 4-2. モバイル端末を対象にした3D都市モデルの作成
 ### アートスタイルの選定
