@@ -6,10 +6,32 @@ namespace PlateauSamples.MiniatureViewer
     {
         void Start()
         {
-            if (SystemInfo.systemMemorySize < 6000)
+            float scalingFactor = CalculateScalingFactor();
+            QualitySettings.resolutionScalingFixedDPIFactor = scalingFactor;
+        }
+
+        float CalculateScalingFactor()
+        {
+            if (Application.platform == RuntimePlatform.IPhonePlayer)
             {
-                QualitySettings.resolutionScalingFixedDPIFactor = 0.5f;
+                if (SystemInfo.systemMemorySize > 5000)
+                {
+                    return 1.0f;
+                }
+                else if (SystemInfo.systemMemorySize > 3500)
+                {
+                    return 0.7f;
+                }
             }
+            else
+            {
+                if (SystemInfo.systemMemorySize > 5000)
+                {
+                    return 0.7f;
+                }
+            }
+
+            return 0.5f;
         }
     }
 }

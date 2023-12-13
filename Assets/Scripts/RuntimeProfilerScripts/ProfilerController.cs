@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Text;
 using Unity.Profiling;
 using UnityEngine;
@@ -70,6 +70,8 @@ namespace PlateauSamples.MiniatureViewer
             float lastFrameTime = m_MainThreadTimeRecorder.LastValue * (1e-9f); // Last frame time in seconds (nanoseconds to seconds)
             float fps = 1f / lastFrameTime; // FPS is the inverse of the frame time in seconds
 
+            int systemMemorySize = SystemInfo.systemMemorySize;
+
             // Continue with the existing StringBuilder code
             var sb = new StringBuilder(500);
             sb.AppendLine($"Frame Time: {lastFrameTime * 1000:F1} ms"); // Convert to milliseconds for display
@@ -82,7 +84,7 @@ namespace PlateauSamples.MiniatureViewer
             sb.AppendLine($"SetPass Calls: {m_SetPassCallsRecorder.LastValue}");
             sb.AppendLine($"Screen Width: {Screen.width}px");
             sb.AppendLine($"Screen Height: {Screen.height}px");
-
+            sb.AppendLine($"RAM: {systemMemorySize} MB");
             m_StatsText = sb.ToString();
         }
         void OnGUI()
