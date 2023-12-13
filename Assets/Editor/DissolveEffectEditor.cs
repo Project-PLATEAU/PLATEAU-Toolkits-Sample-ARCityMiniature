@@ -6,8 +6,8 @@ namespace PlateauSamples.MiniatureViewer
     [CustomEditor(typeof(DissolveEffect))]
     public class DissolveEffectEditor : Editor
     {
-        private float alphaValue = 1.0f;
-        private float dissolveValue = 0.0f;
+        float m_AlphaValue = 1.0f;
+        float m_DissolveValue = 0.0f;
 
         public override void OnInspectorGUI()
         {
@@ -15,28 +15,24 @@ namespace PlateauSamples.MiniatureViewer
 
             DissolveEffect script = (DissolveEffect)target;
 
-            // ボタンを追加
             if (GUILayout.Button("Start Animation"))
             {
                 script.StartAnimation();
             }
 
-            // Alpha 値のスライダー
             GUILayout.Label("Set Alpha Value");
-            alphaValue = EditorGUILayout.Slider("Alpha", alphaValue, 0f, 1f);
+            m_AlphaValue = EditorGUILayout.Slider("Alpha", m_AlphaValue, 0f, 1f);
             if (GUILayout.Button("Set Alpha"))
             {
-                script.SetAlpha(alphaValue);
+                script.SetAlpha(m_AlphaValue);
             }
 
-            // Dissolve 値のスライダー
             GUILayout.Label("Set Dissolve Value");
-            dissolveValue = EditorGUILayout.Slider("Dissolve", dissolveValue, -1f, 1f);
+            m_DissolveValue = EditorGUILayout.Slider("Dissolve", m_DissolveValue, -1f, 1f);
             if (GUILayout.Button("Set Dissolve"))
             {
-                script.SetDissolve(dissolveValue);
+                script.SetDissolve(m_DissolveValue);
             }
         }
-
     }
 }

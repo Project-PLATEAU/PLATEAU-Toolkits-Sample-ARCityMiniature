@@ -115,31 +115,90 @@ static class MeshUtilitiesEditor
         MeshFilter combinedMeshFilter = combinedMeshObject.AddComponent<MeshFilter>();
         MeshRenderer combinedMeshRenderer = combinedMeshObject.AddComponent<MeshRenderer>();
 
-        var materialToMeshFilters = new Dictionary<Material, List<MeshFilter>>();
+        var combineInstances = new List<CombineInstance>();
+        var materialsList = new List<Material>();
+
         for (int i = 0; i < meshFilters.Count; i++)
         {
-            Material material = meshRenderers[i].sharedMaterial;
-            if (!materialToMeshFilters.ContainsKey(material))
+            Mesh mesh = meshFilters[i].sharedMesh;
+            Material[] materials = meshRenderers[i].sharedMaterials;
+
+            for (int j = 0; j < mesh.subMeshCount; j++)
             {
-                materialToMeshFilters[material] = new List<MeshFilter>();
+                combineInstances.Add(new CombineInstance
+                {
+                    mesh = mesh,
+                    subMeshIndex = j,
+                    transform = meshFilters[i].transform.localToWorldMatrix
+                });
+
+                if (j < materials.Length)
+                {
+                    materialsList.Add(materials[j]);
+                }
             }
-            materialToMeshFilters[material].Add(meshFilters[i]);
         }
 
-        CombineInstance[] combineInstances = materialToMeshFilters.SelectMany(pair =>
-            pair.Value.Select(meshFilter => new CombineInstance
-            {
-                mesh = meshFilter.sharedMesh,
-                transform = meshFilter.transform.localToWorldMatrix
-            })).ToArray();
-
         Mesh combinedMesh = new Mesh();
-        combinedMesh.CombineMeshes(combineInstances, true, true);
+        combinedMesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+        combinedMesh.CombineMeshes(combineInstances.ToArray(), false, true);
         combinedMeshFilter.sharedMesh = combinedMesh;
+        combinedMeshRenderer.materials = materialsList.ToArray();
 
-        combinedMeshRenderer.materials = materialToMeshFilters.Keys.ToArray();
+        ReCombineSubMeshes(combinedMeshObject);
 
         return combinedMeshObject;
+    }
+
+    private static void ReCombineSubMeshes(GameObject combinedMeshObject)
+    {
+        MeshFilter combinedMeshFilter = combinedMeshObject.GetComponent<MeshFilter>();
+        MeshRenderer combinedMeshRenderer = combinedMeshObject.GetComponent<MeshRenderer>();
+
+        Mesh combinedMesh = combinedMeshFilter.sharedMesh;
+        combinedMesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+        Material[] materials = combinedMeshRenderer.sharedMaterials;
+
+        var materialGroups = new Dictionary<Material, List<CombineInstance>>();
+
+        for (int i = 0; i < combinedMesh.subMeshCount; i++)
+        {
+            Material mat = materials[i];
+            if (!materialGroups.ContainsKey(mat))
+            {
+                materialGroups[mat] = new List<CombineInstance>();
+            }
+
+            materialGroups[mat].Add(new CombineInstance
+            {
+                mesh = combinedMesh,
+                subMeshIndex = i,
+                transform = Matrix4x4.identity
+            });
+        }
+
+        var newCombineInstances = new List<CombineInstance>();
+        var newMaterialsList = new List<Material>();
+
+        foreach (var group in materialGroups)
+        {
+            Mesh newSubMesh = new Mesh();
+            newSubMesh.CombineMeshes(group.Value.ToArray(), true, false);
+
+            newCombineInstances.Add(new CombineInstance
+            {
+                mesh = newSubMesh,
+                subMeshIndex = 0,
+                transform = Matrix4x4.identity
+            });
+
+            newMaterialsList.Add(group.Key);
+        }
+
+        Mesh finalMesh = new Mesh();
+        finalMesh.CombineMeshes(newCombineInstances.ToArray(), false, false);
+        combinedMeshFilter.sharedMesh = finalMesh;
+        combinedMeshRenderer.materials = newMaterialsList.ToArray();
     }
 
     public static void AlignEachBottomToOrigin()
