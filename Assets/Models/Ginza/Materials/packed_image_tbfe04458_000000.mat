@@ -21,15 +21,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: packed_image_tbfe04458_000000
-  m_Shader: {fileID: -6465566751694194690, guid: d1014a4b5ff765146b0e6c3f9308b843,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -100,17 +100,32 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DIssolve_Pattern_Rotation: 0
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _Dissolve: 0
+    - _Dissolve_Pattern_Offset: 2.5
+    - _Dissolve_Pattern_Tiling: 180
+    - _Dissolve_Rotation: 0
+    - _Dissolve_Treshold_Alpha_Clip: 0.1
     - _DstBlend: 0
+    - _EdgeLerpFeathering: 1
+    - _EdgeLerpHeight: 0.5
+    - _EdgeLerpTreshold: 0.1
+    - _EdgeWidth: 0.07
+    - _EdgeWidthMult: 0.1
+    - _Edge_Intensity: 1
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.4472136
     - _GlossyReflections: 1
+    - _Height_Value: 1.15
     - _Metalic: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Opacity: 1
+    - _OpacityFadeDistance: 0
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -121,11 +136,17 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
+    - _UseVertexColor: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - _AmbientColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 0.92247653, b: 0.86226416, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.92247653, b: 0.86226416, a: 1}
+    - _Dissolve_Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Dissolve_Range: {r: -10, g: 10, b: 0, a: 0}
+    - _EdgeColour: {r: 0, g: 0.9179602, b: 1, a: 0}
+    - _EdgeLerpColour: {r: 0.335517, g: 0, b: 10.68063, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Vector3: {r: 0, g: 0, b: 0, a: 0}

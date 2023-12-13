@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7777292360119342143}
   - component: {fileID: 1052213626}
-  - component: {fileID: 9182274387432247045}
+  - component: {fileID: 3132752350647803933}
   m_Layer: 0
   m_Name: Ginza
   m_TagString: Untagged
@@ -197,7 +197,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_LoopAnimation: 0
   m_Volume: {fileID: 0}
---- !u!114 &9182274387432247045
+--- !u!114 &3132752350647803933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,13 +212,13 @@ MonoBehaviour:
   m_RendererInfo:
   - m_Renderer: {fileID: 1711813854453625557}
     m_LightmapIndex: 0
-    m_LightmapOffsetScale: {x: 0.7790873, y: 0.7790873, z: 0, w: 0}
+    m_LightmapOffsetScale: {x: 0.7825052, y: 0.7825052, z: 0, w: 0}
   - m_Renderer: {fileID: 9020617254531282672}
     m_LightmapIndex: 1
     m_LightmapOffsetScale: {x: 0.63442, y: 0.63442, z: -0.061226375, w: -0.061226375}
   m_Lightmaps:
-  - {fileID: 2800000, guid: 31c2a568e9b915549b4c995c0655b71d, type: 3}
-  - {fileID: 2800000, guid: f0daa42e2a4c5ad4c914ea10c27387ba, type: 3}
+  - {fileID: 2800000, guid: de51135a2be276047b862790f856859f, type: 3}
+  - {fileID: 2800000, guid: a339312a9df59b447ae48db3f06fffb8, type: 3}
   m_LightmapsDir:
   - {fileID: 0}
   - {fileID: 0}
@@ -251,7 +251,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0bc2f4277e1937c4a9ef18afa3e546af,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0563
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0bc2f4277e1937c4a9ef18afa3e546af,
         type: 3}
@@ -301,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0bc2f4277e1937c4a9ef18afa3e546af,
         type: 3}
       propertyPath: m_Name
-      value: Ginza_VC_Comb
+      value: Ginza
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0bc2f4277e1937c4a9ef18afa3e546af,
         type: 3}

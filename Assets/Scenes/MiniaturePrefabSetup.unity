@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 37a88f90939a5ba4c810112edd4bd25f,
+  m_LightingDataAsset: {fileID: 112000000, guid: 8551795b346566e41935ebe7daf0dc2b,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: fb6a491b201723c44ac5e2fd2e3ff837,
     type: 2}
@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1622629161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956cf3e215dd0f647b7f9b2efd71b996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1978553526332560091
+--- !u!1001 &3462421872812487360
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2

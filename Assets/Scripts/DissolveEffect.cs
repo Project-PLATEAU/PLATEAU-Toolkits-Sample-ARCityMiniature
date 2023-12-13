@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace PlateauSamples.MiniatureViewer
 {
@@ -10,7 +9,6 @@ namespace PlateauSamples.MiniatureViewer
         [SerializeField] AnimationCurve m_DissolveCurve; // Animation curve for the dissolve parameter
         [SerializeField] AnimationCurve m_AlphaCurve; // Animation curve for the alpha parameter
         [SerializeField] bool m_LoopAnimation; // Whether to enable loop animation
-        [SerializeField] Volume m_Volume; // Reference to the Volume component
 
         float m_CurrentTime; // Current time
         bool m_IsAnimating; // Whether the animation is in progress
