@@ -171,7 +171,7 @@
         "com.unity.visualeffectgraph": "12.1.10",
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       },
-      "hash": "e3eb7278eda18480412b9e7aead7dc5579c59940"
+      "hash": "f193503a74bebb2df1517a564be67ce4de03b9f8"
     },
     "com.unity.render-pipelines.core": {
       "version": "12.1.12",
