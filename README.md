@@ -46,6 +46,15 @@ PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
 ### PLATEAU SDK Rendering Toolkit
 - 窓用の頂点カラー調整
 
+### PLATEAU SDK AR Extensions
+- ARマーカーを用いた3D都市モデルの位置合わせ機能
+
+### PLATEAU SDK Utilities
+- メッシュレンダラーの選択機能
+- メッシュ頂点の平面化機能
+- 選択地物の整列機能
+- シーンのライトマップをプレハブに設定する機能
+
 # 2. 利用手順
 ## 2-1. 推奨環境
 ### 参考開発環境
