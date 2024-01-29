@@ -421,43 +421,59 @@ Gradientプロパティを押下すると右側のシェーダーグラフのイ
 #### ライトの設定
 シーン内に必要な光源を配置し、任意のライティング設定を行います。ライトマップをベイクするためには、FBXファイルの「ライトマップUV」の項目をチェックし、対象のオブジェクトのStaticフラグを有効にします。この設定はオブジェクトにライトマップのデータが適切にマッピングされる為のUVを作成します。
 
-<img width="600" alt="miniature_sample_lightmap_uv" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_uv.png">
-<img width="600" alt="miniature_sample_lightmap_static" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_static.png">
+<img width="600" alt="miniature_sample_lightmap_uv" src="/Documentation~/Images/miniature_sample_lightmap_uv.png">
+<img width="600" alt="miniature_sample_lightmap_static" src="/Documentation~/Images/miniature_sample_lightmap_static.png">
 
 ### ライトマップベイクの実行
 ベイクする準備が完了したらライティング設定からライトマップをベイクします。以下の画像はサンプルプロジェクトで用意しているライトマップの設定です。
 
-<img width="600" alt="miniature_sample_lightmap_settings" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_settings.png">
+<img width="600" alt="miniature_sample_lightmap_settings" src="/Documentation~/Images/miniature_sample_lightmap_settings.png">
 
 ### プレハブへのライトマップ適用
 Unityのライトマップはシーン上のオブジェクトを対象としているため標準機能ではプレハブにライトマップを適用する機能はありませんが、拡張スクリプトを作成してプレハブにライトマップの情報を保存することが可能です。この手順により、異なるシーンでベイクされたライティング情報をのオブジェクトを一つのシーンで使うことができます。
-`PrefabLightmapData` コンポーネントをプレハブのルートに追加し、Unityエディタメニューから "MiniatureViewer" > "シーンのライトマップをプレハブに設定" を選択してプレハブのライトマップ生成を実行します。
+`PrefabLightmapData` コンポーネントをプレハブのルートに追加し、PLATEAU Utilities ウィンドウ「シーンのライトマップをプレハブに設定」を押下してプレハブのライトマップ生成を実行します。
 
-<img width="600" alt="miniature_sample_lightmap_component" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_component.png">
+<img width="600" alt="miniature_prefab_lightmap" src="/Documentation~/Images/miniature_prefab_lightmap.png">
 
-<img width="600" alt="miniature_sample_lightmap_bakeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_bakeprefab.png">
+<img width="600" alt="miniature_prefab_lightmap_menu" src="/Documentation~/Images/miniature_prefab_lightmap_menu.png">
 
 ## 4-5. ナビメッシュの作成と人の配置
 ### ナビメッシュ追加パッケージのインストール
 ナビメッシュの基本機能ではナビメッシュのデータはシーン内に保存されるため、プレハブ上でナビメッシュを実行するためには追加のパッケージが必要です。サンプルプロジェクトではすでに追加パッケージがインストールされているため、このプロジェクトを元に改変を行う場合はインストールは必要ありません。別のプロジェクトで追加パッケージのインストールが必要な場合はパッケージマネージャーからインストールを行います。
 
-<img width="600" alt="miniature_sample_ainavigation_url" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_ainavigation_url.png">
+<img width="600" alt="miniature_sample_ainavigation_url" src="/Documentation~/Images/miniature_sample_ainavigation_url.png">
 
-<img width="600" alt="miniature_sample_ainavigation_package" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_ainavigation_package.png">
+<img width="600" alt="miniature_sample_ainavigation_package" src="/Documentation~/Images/miniature_sample_ainavigation_package.png">
 
 ### ナビメッシュのベイク方法
 `NavMeshSurface` コンポーネントを空のゲームオブジェクトにアタッチしてベイクします。ナビメッシュは小さすぎるオブジェクトに対応していないので、一時的にミニチュア都市モデルのスケールを拡大してベイクし、その後障害物や侵入させたくないエリアの設定を追加で行います。<br>
 
-<img width="600" alt="miniature_sample_ナビメッシュ_surface_component" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_navmesh_surface_component.png">
+<img width="600" alt="miniature_sample_navmesh_surface_component" src="/Documentation~/Images/miniature_sample_navmesh_surface_component.png">
 
-<img width="600" alt="miniature_sample_lightmap_bakeprefab" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_lightmap_bakeprefab.png">
+<img width="600" alt="miniature_sample_lightmap_bakeprefab" src="/Documentation~/Images/miniature_sample_lightmap_bakeprefab.png">
 
 ### サンプルプロジェクトに合わせたナビメッシュ調整
 ARでは3D都市モデル全体のスケーリングや回転等の機能が実装されていますが、通常のナビメッシュはこれらに対応していません。専用のカスタムコンポーネントを追加することで、固定位置のナビメッシュからアプリケーション上の3D都市モデルミニチュアオブジェクト上でスポーンするすべてのアバターにトランスフォームの再マッピングを行います。
   
-<img width="600" alt="miniature_sample_ナビメッシュ_transform_remapping" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_navmesh_transform_remapping.png">
+<img width="600" alt="miniature_sample_navmesh_transform_remapping" src="/Documentation~/Images/miniature_sample_navmesh_transform_remapping.png">
 
 #### 人の配置
 ナビメッシュ上に人のモデルを配置し、AR環境内でのリアルタイムインタラクションを提供します。これにより、都市モデルがより現実的で臨場感のあるものになります。
 
-<img width="600" alt="miniature_sample_ナビメッシュ_human" src="https://github.com/unity-takeuchi/PLATEAU-SDK-AR-Extensions-for-Unity-drafts/blob/main/SampleSceneReadmeImages/AR%20City%20Miniature/miniature_sample_navmesh_human.png">
+<img width="600" alt="miniature_sample_navmesh_human" src="/Documentation~/Images/miniature_sample_navmesh_human.png">
+
+# ライセンス
+
+- 本リポジトリはMITライセンスで提供されています。
+- 本システムの開発はユニティ・テクノロジーズ・ジャパン株式会社が行っています。
+- ソースコードおよび関連ドキュメントの著作権は国土交通省に帰属します。
+
+# 注意事項/利用規約
+
+- 本ツールはベータバージョンです。バグ、動作不安定、予期せぬ挙動等が発生する可能性があり、動作保証はできかねますのでご了承ください。
+- 本ツールをアンインストールした場合、本ツールの機能で作成されたアセットの動作に不備が発生する可能性があります。
+- 本ツールをアップデートした際は、一度 Unity エディターを再起動することを推奨しています。
+- パフォーマンスの観点から、3km²の範囲に収まる3D都市モデルをダウンロード・インポートすることを推奨しています。
+- インポートする範囲の広さや地物の種類（建物、道路、災害リスクなど）が量に比例して処理負荷が高くなる可能性があります。
+- 本リポジトリの内容は予告なく変更・削除される可能性があります。
+- 本リポジトリの利用により生じた損失及び損害等について、国土交通省はいかなる責任も負わないものとします。
