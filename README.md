@@ -317,7 +317,7 @@ Materials の項目をインスペクターから開いて新しく作成した�
 <img width="600" alt="miniature_colorful_city_23.png" src="/Documentation~/Images/miniature_colorful_city_23.png">
 地物のバウンディングボックスの底から頂上に向かって、白から黒へのグラデーションが塗られています。
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/98b634ef-2a22-4be7-8e28-76e1ad1108e9/Untitled.png)
+<img width="800" alt="miniature_vertex_g.png" src="/Documentation~/Images/miniature_vertex_g.png">
 
 ### 頂点カラーAチャンネル
 
@@ -331,7 +331,7 @@ Materials の項目をインスペクターから開いて新しく作成した�
 <img width="600" alt="miniature_colorful_city_23.png" src="/Documentation~/Images/miniature_colorful_city_23.png">
 地物ごとにランダムな値が割り当てられています。ランダムな値を使用することで、シェーダー内で多様な表現を行うことができます。今回はこちらをメインに使用します。
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/b9571bb5-961c-4185-92db-01487d6142ec/Untitled.png)
+<img width="800" alt="miniature_vertex_a.png" src="/Documentation~/Images/miniature_vertex_a.png">
 
 シェーダーグラフをここから少し編集して、頂点カラーのアルファチャンネルを使用し、カラフルな3D都市モデルを作成していきます。
 
