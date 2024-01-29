@@ -214,18 +214,14 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 **マテリアル数の削減による描画負荷の軽減**
 
 極端な例ですが、例えば地物ごとに、マテリアルのカラーを使用して、地物ごとに違う色を割り当てた場合、基本的には色の数だけ違うマテリアルが必要になります。100色あれば、100個マテリアルが必要です。
-
-![miniature_vtxcolor_explain_01.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/104c823d-8427-42ed-baf5-5439a35c1c27/miniature_vtxcolor_explain_01.png)
 <img width="600" alt="miniature_vtxcolor_explain_01.png" src="/Documentation~/Images/miniature_vtxcolor_explain_01.png">
 一方で、地物一つ一つに個別の頂点カラーを割り当てる場合、頂点カラーを表示するマテリアル1つのみで同じ表現が可能になります。一般的にはマテリアルが増える程、描画負荷が高くなる為、頂点カラーを上手く活用することで描画負荷の改善をおこなうことができます。
 
-![miniature_vtxcolor_explain_00.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/e2cfcee2-08de-43f9-8990-6e014035ba79/miniature_vtxcolor_explain_00.png)
 <img width="600" alt="miniature_vtxcolor_explain_00.png" src="/Documentation~/Images/miniature_vtxcolor_explain_00.png">
 ### 広い応用範囲
 
 また、ゲーム等で良く使われる使用例として頂点カラーでマスクを作成して、シェーダーと組み合わせることで、複数のテクスチャをブレンディングしたりすることができます。（例: 苔の生えた岩等)
 
-![miniature_vtxcolor_explain_03.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/f42c08f7-1063-44c6-b531-dc6879b953f3/miniature_vtxcolor_explain_03.gif)
 <img width="600" alt="miniature_vtxcolor_explain_03.gif" src="/Documentation~/Images/miniature_vtxcolor_explain_03.gif">
 
 Unity上では頂点カラーをペイントするために、[Polybush](https://unity.com/features/polybrush)パッケージが用意されています。
@@ -238,13 +234,10 @@ PolyBrushの使い方等は[こちら](https://docs.unity3d.com/ja/Packages/com.
 
 PLATEAU > PLATEAU Toolkit > Utilities から PLATEAU Utilities を開き、「メッシュレンダラーの選択」を使用して、３D都市モデルのトップノードを選択し、現在表示されているビルを一括選択します。
 
-![miniature_colorful_city_00.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/2d3b6011-4775-47f2-a8fd-498c2f409685/miniature_colorful_city_00.png)
 <img width="600" alt="miniature_colorful_city_00.png" src="/Documentation~/Images/miniature_colorful_city_00.png">
-![miniature_colorful_city_01.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/9ecfdfd5-8ea7-4a7a-a4f5-59cc19bddbca/miniature_colorful_city_01.png)
 <img width="600" alt="miniature_colorful_city_01.png" src="/Documentation~/Images/miniature_colorful_city_01.png">
 PLATEAU > PLATEAU Toolkit > Rendering Toolkit から PLATEAU Rendering Toolkit ウインドウを開いて、自動テクスチャ生成のタブから「頂点カラーの調整」を押下します。
 
-![miniature_colorful_city_02.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/57b88774-d3ab-41e7-8c97-3bf20be83849/miniature_colorful_city_02.png)
 <img width="600" alt="miniature_colorful_city_02.png" src="/Documentation~/Images/miniature_colorful_city_02.png">
 この時点では、Unityの標準のLitシェーダーでは頂点カラーの表示に対応していない為、頂点カラーを表示することができません。頂点カラーの表示を確認するには、頂点カラーに対応したシェーダーが必要です。Unityにはシェーダーグラフというツールがあり、ノーコードでノードを繋いでいくことで視覚的にシェーダーを作成することができます。シェーダーグラフを使用してシェーダーを作成していきます。
 
@@ -260,9 +253,7 @@ PLATEAU > PLATEAU Toolkit > Rendering Toolkit から PLATEAU Rendering Toolkit �
 
 プロジェクトウインドウ > 右クリックメニュー > Create > Material を押下します。
 
-![miniature_colorful_city_03.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/5d6b92ec-775e-4aaf-b23b-9dfdbab7fa58/miniature_colorful_city_03.png)
 <img width="600" alt="miniature_colorful_city_03.png" src="/Documentation~/Images/miniature_colorful_city_03.png">
-![miniature_colorful_city_04.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/afb6b9fc-500b-4ca9-af71-eb8669beb07f/miniature_colorful_city_04.png)
 <img width="600" alt="miniature_colorful_city_41.png" src="/Documentation~/Images/miniature_colorful_city_04.png">
 新しく作成したマテリアルシーンの地物に割り当てします。PLATEAU Utilities ツールで地物を全部選択します。先程と同じく、PLATEAU > PLATEAU Toolkit > Utilities ツールの「メッシュレンダラーの選択」を使用して、３D都市モデルのトップノードを選択し、現在表示されているビルを一括選択します。
 
@@ -270,67 +261,49 @@ PLATEAU > PLATEAU Toolkit > Rendering Toolkit から PLATEAU Rendering Toolkit �
 
 Materials の項目をインスペクターから開いて新しく作成したマテリアルを割り当てます。
 
-![miniature_colorful_city_05.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/97211318-4a54-417d-8c6e-a4f44dc389a9/miniature_colorful_city_05.png)
 <img width="600" alt="miniature_colorful_city_05.png" src="/Documentation~/Images/miniature_colorful_city_05.png">
 3D都市モデルの地物には壁と床部分のマテリアルがそれぞれ割り当てられているため、スロットの1番目と2番目の両方新しく作成したマテリアルをアサインします。
 
-![miniature_colorful_city_06.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/ca8272ec-429c-4dca-9fc9-58c27dc31565/miniature_colorful_city_06.png)
 <img width="600" alt="miniature_colorful_city_06.png" src="/Documentation~/Images/miniature_colorful_city_06.png">
-![miniature_colorful_city_07.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/1f82280e-e8ee-4855-8cd3-a7b793ecf0cc/miniature_colorful_city_07.png)
 <img width="600" alt="miniature_colorful_city_07.png" src="/Documentation~/Images/miniature_colorful_city_07.png">
 続いてプロジェクトウインドウからシェーダーグラフのアセットを作成します。
 
 プロジェクトウインドウ > 右クリックメニュー > Create > Shader Graph > URP > Lit Shader Graph を押下します。
 
-![miniature_colorful_city_08.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/c1c059f9-bc05-4156-816b-6ac1206043fa/miniature_colorful_city_08.png)
 <img width="600" alt="miniature_colorful_city_08.png" src="/Documentation~/Images/miniature_colorful_city_08.png">
 新しいシェーダーグラフアセットが作成されます。
 
-![miniature_colorful_city_09.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/a7ef5586-7706-485c-881e-d3f9a81d898d/miniature_colorful_city_09.png)
 <img width="600" alt="miniature_colorful_city_09.png" src="/Documentation~/Images/miniature_colorful_city_09.png">
 新規で作成して3D都市モデルに割り当てた New Material に作成したシェーダーを割り当てます。
 
 マテリアルを選択してインスペクターから「New Shader Graph」を選択します。
 
-![miniature_colorful_city_15.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/32b55007-502f-4e17-a434-5130e492e78b/miniature_colorful_city_15.png)
 <img width="600" alt="miniature_colorful_city_15.png" src="/Documentation~/Images/miniature_colorful_city_15.png">
-![miniature_colorful_city_16.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/71b9144a-0450-4249-9f02-fe921ac13855/miniature_colorful_city_16.png)
 <img width="600" alt="miniature_colorful_city_16.png" src="/Documentation~/Images/miniature_colorful_city_16.png">
 作成したアセットをダブルクリックするとシェーダーグラフの編集ウインドウが表示されます。
 
-![miniature_colorful_city_09.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/a7ef5586-7706-485c-881e-d3f9a81d898d/miniature_colorful_city_09.png)
 <img width="600" alt="miniature_colorful_city_09.png" src="/Documentation~/Images/miniature_colorful_city_09.png">
-![miniature_colorful_city_10.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/0c3f5220-50da-41f9-8d75-1139d3eb890e/miniature_colorful_city_10.png)
 <img width="600" alt="miniature_colorful_city_10.png" src="/Documentation~/Images/miniature_colorful_city_10.png">
 右クリック > Create Node を押下して、Create Nodeのパネルから検索ボックスに「Vertex」と入力し、表示されたVertexColorノードを押下して作成します。を押してVertex Colorノードを作成し、カラーノードと接続します。
 
-![miniature_colorful_city_11.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/66c257cb-8266-4991-9ade-98df833d5b01/miniature_colorful_city_11.png)
 <img width="600" alt="miniature_colorful_city_11.png" src="/Documentation~/Images/miniature_colorful_city_11.png">
-![miniature_colorful_city_12.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/03c3f84c-1092-49a9-8f75-3000635b1508/miniature_colorful_city_12.png)
 <img width="600" alt="miniature_colorful_city_12.png" src="/Documentation~/Images/miniature_colorful_city_12.png">
-![miniature_colorful_city_13.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/c1031a22-fb00-4771-8182-e45a7e78aa1f/miniature_colorful_city_13.png)
 <img width="600" alt="miniature_colorful_city_13.png" src="/Documentation~/Images/miniature_colorful_city_13.png">
 「VertexColor」ノードと「Fragment」タブの「BaseColor」を接続します。基本的にはこれだけで頂点カラーを表示するシェーダーができます。
 
-![miniature_colorful_city_14.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/50e8e224-5d6e-42ed-833f-bfedc8999b1a/miniature_colorful_city_14.png)
 <img width="600" alt="miniature_colorful_city_14.png" src="/Documentation~/Images/miniature_colorful_city_14.png">
 ここまでの作業を保存します。シェーダーグラフの編集ウインドウの右上の「Save Asset」を押すと、ここまでの作業がアセットに保存されます。
 
-![miniature_colorful_city_21.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/4c0bfa2e-b369-435d-9d8b-e60394cfcfb1/miniature_colorful_city_21.png)
 <img width="600" alt="miniature_colorful_city_21.png" src="/Documentation~/Images/miniature_colorful_city_21.png">
 シーンに戻ると3D都市モデルに頂点カラーが表示されます。
 
-![miniature_colorful_city_17.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/3f4454f4-6435-436b-b89f-01bc756d70de/miniature_colorful_city_17.png)
 <img width="600" alt="miniature_colorful_city_17.png" src="/Documentation~/Images/miniature_colorful_city_17.png">
 次にSplitノードと接続します。実際の開発では、頂点カラーはシェーダー内でマスク要素として、各チャンネルを使用するケースが多く、RenderingToolkitで自動付与した頂点カラーも、Gチャンネルと、Aチャンネルに個別の要素を格納しています。これらを確認していきます。
 
 右クリック > Create Node を押下して、Create Node パネルから検索ボックスに「Split」と入力し、表示された「Split」ノードを押下して作成します。
 
-![miniature_colorful_city_11.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/66c257cb-8266-4991-9ade-98df833d5b01/miniature_colorful_city_11.png)
 <img width="600" alt="miniature_colorful_city_11.png" src="/Documentation~/Images/miniature_colorful_city_11.png">
-![miniature_colorful_city_18.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/8cc63a8c-170f-42c1-bd30-3c793e239544/miniature_colorful_city_18.png)
 <img width="600" alt="miniature_colorful_city_18.png" src="/Documentation~/Images/miniature_colorful_city_18.png">
-![miniature_colorful_city_22.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/2a042529-b7f3-4523-99c7-96d88001387c/miniature_colorful_city_22.png)
 <img width="600" alt="miniature_colorful_city_22.png" src="/Documentation~/Images/miniature_colorful_city_22.png">
 ### 頂点カラーGチャンネル
 
@@ -338,11 +311,9 @@ Materials の項目をインスペクターから開いて新しく作成した�
 「Vertex Color」ノードの「Out」を「Split」ノードの「In」に接続します。
 「Split」ノードの「G」チャンネルを「Fragment」パネルの「BaseColor」に接続します。
 
-![miniature_colorful_city_19.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/65acb382-b530-46cd-80b6-2971b48708e6/miniature_colorful_city_19.png)
 <img width="600" alt="miniature_colorful_city_19.png" src="/Documentation~/Images/miniature_colorful_city_19.png">
 シェーダーグラフの編集ウインドウの右上の「Save Assetを」押下してここまでの作業を保存します。保存完了後、シーンを確認します。
 
-![miniature_colorful_city_23.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/a3cacd32-d70f-4df0-b629-358e8e85e9ce/miniature_colorful_city_23.png)
 <img width="600" alt="miniature_colorful_city_23.png" src="/Documentation~/Images/miniature_colorful_city_23.png">
 地物のバウンディングボックスの底から頂上に向かって、白から黒へのグラデーションが塗られています。
 
@@ -354,11 +325,9 @@ Materials の項目をインスペクターから開いて新しく作成した�
 
 「Split」ノードの「A」チャンネルを「Fragment」パネルの「BaseColor」に接続します。
 
-![miniature_colorful_city_20.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/d685e672-8e01-4454-ae99-a22e18209b03/miniature_colorful_city_20.png)
 <img width="600" alt="miniature_colorful_city_20.png" src="/Documentation~/Images/miniature_colorful_city_20.png">
 シェーダーグラフの編集ウインドウの右上の「Save Asset」を押下してここまでの作業を保存します。保存完了後、シーンを確認します。
 
-![miniature_colorful_city_23.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/a3cacd32-d70f-4df0-b629-358e8e85e9ce/miniature_colorful_city_23.png)
 <img width="600" alt="miniature_colorful_city_23.png" src="/Documentation~/Images/miniature_colorful_city_23.png">
 地物ごとにランダムな値が割り当てられています。ランダムな値を使用することで、シェーダー内で多様な表現を行うことができます。今回はこちらをメインに使用します。
 
@@ -370,35 +339,27 @@ Gradientのプロパティを作成します。
 
 シェーダーグラフ編集ウインドウの左側のパネルの「＋」マークを押下するとパネルが表示されるので「Gradient」を押下します。
 
-![miniature_colorful_city_24.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/8aebf470-1798-44c2-a751-bdcedbf23e19/miniature_colorful_city_24.png)
 <img width="600" alt="miniature_colorful_city_24.png" src="/Documentation~/Images/miniature_colorful_city_24.png">
 Gradientプロパティが作成されます。
 
 Gradientプロパティを押下すると右側のシェーダーグラフのインスペクターの表示が変わるので「Default」のカラーを押下します。
 
-![miniature_colorful_city_26.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/8fa821a8-155a-4824-9582-577ce5379e26/miniature_colorful_city_26.png)
 <img width="600" alt="miniature_colorful_city_26.png" src="/Documentation~/Images/miniature_colorful_city_26.png">
-![miniature_colorful_city_27.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/559ed8b7-924a-4acf-9980-f4358b27ba92/miniature_colorful_city_27.png)
 <img width="600" alt="miniature_colorful_city_27.png" src="/Documentation~/Images/miniature_colorful_city_27.png">
 グラデーションを調整するパネルが表示されるので色を調整します。
 
 今回は虹色に調整しました。
 
-![miniature_colorful_city_28.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/7a5b7c5b-ce02-4cf1-b7c2-3370258e384d/miniature_colorful_city_28.png)
 <img width="600" alt="miniature_colorful_city_28.png" src="/Documentation~/Images/miniature_colorful_city_28.png">
 グラデーション調整後、Gradientプロパティを他のノードと接続できるようにパネルの右側にドラッグアンドドロップします。こうすることで他のノードと接続できるようになります。
 
-![miniature_colorful_city_31.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/e4612b2a-9dea-49e9-9d6e-c058a93cbb04/miniature_colorful_city_31.png)
 <img width="600" alt="miniature_colorful_city_31.png" src="/Documentation~/Images/miniature_colorful_city_31.png">
 「Sample Gradient」ノードを作成します。
 
 右クリック > Create Node を押下して、Create Node パネルから検索ボックスに「sample」と入力し、表示された「Sample Gradient」ノードを押下して作成します。
 
-![miniature_colorful_city_11.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/66c257cb-8266-4991-9ade-98df833d5b01/miniature_colorful_city_11.png)
 <img width="600" alt="miniature_colorful_city_11.png" src="/Documentation~/Images/miniature_colorful_city_11.png">
-![miniature_colorful_city_32.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/7d68297d-c5ee-4f5c-8bbc-fc0629188496/miniature_colorful_city_32.png)
 <img width="600" alt="miniature_colorful_city_32.png" src="/Documentation~/Images/miniature_colorful_city_32.png">
-![miniature_colorful_city_33.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/9b7074f0-c660-422f-9d42-3d456ccaeb54/miniature_colorful_city_33.png)
 <img width="600" alt="miniature_colorful_city_33.png" src="/Documentation~/Images/miniature_colorful_city_33.png">
 作成した「Sample Gradient」ノードのTimeにSplitノードのAチャンネルを接続します。
 
@@ -406,33 +367,25 @@ Gradientプロパティを押下すると右側のシェーダーグラフのイ
 
 最後に「Sample Gradient」ノードの「Out」を Fragment パネル「Base Color」に接続します。
 
-![miniature_colorful_city_34.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/8b547d80-59a2-4c1c-b880-5e9e33e3ee63/miniature_colorful_city_34.png)
 <img width="600" alt="miniature_colorful_city_34.png" src="/Documentation~/Images/miniature_colorful_city_34.png">
 シェーダーグラフの編集ウインドウの右上の「Save Asset」を押下してここまでの作業を保存します。保存完了後、シーンを確認します。
-
-![miniature_colorful_city_23.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/a3cacd32-d70f-4df0-b629-358e8e85e9ce/miniature_colorful_city_23.png)
 <img width="600" alt="miniature_colorful_city_23.png" src="/Documentation~/Images/miniature_colorful_city_23.png">
 シーンにカラフルな3D都市モデルが表示されます。
 
-![miniature_colorful_city_35.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/95005478-f973-4650-a286-aeddffade69b/miniature_colorful_city_35.png)
 <img width="600" alt="miniature_colorful_city_35.png" src="/Documentation~/Images/miniature_colorful_city_35.png">
 仕組みとしては頂点アルファの値が0～1でランダムで地物ごとに自動で付与されており、SampleGradientノードを使用してこれらの値がカラーグラデーションに再マッピングされます。グラデーションの左が0（黒）で右が1（白）です。
 
-![miniature_colorful_city_38.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/48db5487-2788-48a7-a660-218e1807d4e2/miniature_colorful_city_38.png)
 <img width="600" alt="miniature_colorful_city_38.png" src="/Documentation~/Images/miniature_colorful_city_38.png">
 グラデーションカラーを調整して好みのカラーで3D都市モデルの見た目を調整することができます。
 
-![miniature_colorful_city_36.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/a9bfd11f-9417-410d-8925-51766db4fdfb/miniature_colorful_city_36.png)
 <img width="600" alt="miniature_colorful_city_36.png" src="/Documentation~/Images/miniature_colorful_city_36.png">
-![miniature_colorful_city_37.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/8262155e-d1ff-4d94-8d5a-98077318df3d/miniature_colorful_city_37.png)
 <img width="600" alt="miniature_colorful_city_37.png" src="/Documentation~/Images/miniature_colorful_city_37.png">
 ここまでの手順で、ビジュアルの主要部分が完成しました。これまでの工程を通じて作成されたシェーダーグラフのアセットは、プロジェクトの下記の場所にあります。
 
 - シェーダーグラフ：Assets/Shaders/VertexAlphaSample.shadergraph
 - マテリアル： Assets/Models/CommonMaterials/VertexAlphaSample.mat
 
-![2024-01-29_15h24_19.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7f38f07b-eb12-41a8-b644-a03471bc3bae/345b3fe9-84ee-4b5b-93c0-99d07a275c98/2024-01-29_15h24_19.png)
-
+<img width="600" alt="miniature_city_final.png" src="/Documentation~/Images/miniature_city_final.png">
 さらに、本サンプルで作成したシェーダーグラフは、追加でGチャンネルのマスクなどを活用して拡張されています。この拡張されたシェーダーグラフのアセットについては、プロジェクトの下記の場所にあります。
 
 - シェーダーグラフ: Assets/Shaders/ColorBuilding.shadergraph
@@ -443,10 +396,6 @@ Gradientプロパティを押下すると右側のシェーダーグラフのイ
 - シーン: Assets/Scenes/MiniaturePrefabSetup.unity
 
 
-
-
-<img width="600" alt="miniature_sample_shadergraph_mapping" src="/Documentation~/Images/miniature_sample_shadergraph_mapping.png">
-<img width="600" alt="miniature_sample_gradation_mapping" src="/Documentation~/Images/miniature_sample_gradation_mapping.png">
 
 ## 4-3. モデルの加工と出力
 ### 地物の高さの調整とメッシュのマージ
