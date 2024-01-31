@@ -19,8 +19,19 @@
       },
       "url": "https://unity.pkg.cesium.com"
     },
+    "com.google.ar.core.arfoundation.extensions": {
+      "version": "https://github.com/google-ar/arcore-unity-extensions.git#1.39.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.arfoundation": "4.1.5",
+        "com.unity.xr.arcore": "4.1.5",
+        "com.unity.xr.arkit": "4.1.5"
+      },
+      "hash": "92e1dbfdb637b9d29372e3891dcd55194e33d601"
+    },
     "com.synesthesias.plateau-unity-sdk": {
-      "version": "https://github.com/Synesthesias/PLATEAU-SDK-for-Unity.git#v2.1.1-alpha",
+      "version": "https://github.com/Synesthesias/PLATEAU-SDK-for-Unity.git#v2.3.2",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -29,7 +40,7 @@
         "com.unity.formats.fbx": "4.1.2",
         "com.unity.test-framework": "1.1.31"
       },
-      "hash": "a29929ca9b67d1c55f9eb4ec0456e691fec39cf7"
+      "hash": "0f0914676e866dbcdc5bccaee8aec35fa8d4c338"
     },
     "com.unity.ai.navigation": {
       "version": "1.0.0-exp.4",
@@ -160,7 +171,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.plateautoolkit": {
-      "version": "https://github.com/Project-PLATEAU/PLATEAU-SDK-Toolkits-for-Unity.git#v0.3.0",
+      "version": "https://github.com/PLATEAU-Toolkits-Internal/PLATEAU-SDK-Toolkits-for-Unity.git#main",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -171,7 +182,20 @@
         "com.unity.visualeffectgraph": "12.1.10",
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       },
-      "hash": "a382f0b727f3626e59424b6562c6bf384dc216aa"
+      "hash": "1b6df9c76be4045f8ebe3843bcd01fbde1311e80"
+    },
+    "com.unity.plateautoolkit.ar": {
+      "version": "https://github.com/PLATEAU-Toolkits-Internal/PLATEAU-SDK-AR-Extensions-for-Unity.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.arkit": "4.2.8",
+        "com.unity.modules.xr": "1.0.0",
+        "com.unity.plateautoolkit": "0.1.0",
+        "com.synesthesias.plateau-unity-sdk": "1.0.0",
+        "com.google.ar.core.arfoundation.extensions": "1.39.0"
+      },
+      "hash": "0144b810b9bccaa21503b5e2bc9d5082b78c529e"
     },
     "com.unity.render-pipelines.core": {
       "version": "12.1.12",

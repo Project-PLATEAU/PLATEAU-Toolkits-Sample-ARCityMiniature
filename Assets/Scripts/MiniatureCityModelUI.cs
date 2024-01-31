@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using Slider = UnityEngine.UI.Slider;
 
 namespace PlateauSamples.MiniatureViewer
 {
@@ -7,24 +7,18 @@ namespace PlateauSamples.MiniatureViewer
     {
         [SerializeField] Slider m_ZoomSlider;
         [SerializeField] Slider m_RotationSlider;
-
-        Transform m_CityModel;
-
-        public void SetCityModelTransform(Transform cityModel)
-        {
-            m_CityModel = cityModel;
-        }
-
+        [SerializeField] Transform m_TargetTransform;
+        [SerializeField] Transform m_MarkerPoint;
         void Start()
         {
             m_ZoomSlider.onValueChanged.AddListener(value =>
             {
-                m_CityModel.localScale = Vector3.one * value;
+                m_TargetTransform.localScale = Vector3.one * value;
             });
 
             m_RotationSlider.onValueChanged.AddListener(value =>
             {
-                m_CityModel.localRotation = Quaternion.Euler(0f, value, 0f);
+                m_MarkerPoint.localRotation = Quaternion.Euler(0f, value, 0f);
             });
         }
     }
