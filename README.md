@@ -1,5 +1,7 @@
 # PLATEAU-Toolkits-Sample-ARCityMiniature
-PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション
+## PLATEAU SDK-Toolkits for Unityを使ったサンプルアプリケーション ##
+<img width="1080" alt="ar_city_miniature_kv" src="/Documentation~/Images/ar_city_miniature_kv.png">
+
 
 ## 更新履歴
 
