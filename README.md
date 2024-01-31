@@ -217,9 +217,11 @@ Unity公式のFBXエクスポーターを使用すると、Unityで選択した�
 
 極端な例ですが、例えば地物ごとに、マテリアルのカラーを使用して、地物ごとに違う色を割り当てた場合、基本的には色の数だけ違うマテリアルが必要になります。100色あれば、100個マテリアルが必要です。
 <img width="600" alt="miniature_vtxcolor_explain_01.png" src="/Documentation~/Images/miniature_vtxcolor_explain_01.png">
+
 一方で、地物一つ一つに個別の頂点カラーを割り当てる場合、頂点カラーを表示するマテリアル1つのみで同じ表現が可能になります。一般的にはマテリアルが増える程、描画負荷が高くなる為、頂点カラーを上手く活用することで描画負荷の改善をおこなうことができます。
 
 <img width="600" alt="miniature_vtxcolor_explain_00.png" src="/Documentation~/Images/miniature_vtxcolor_explain_00.png">
+
 ### 広い応用範囲
 
 また、ゲーム等で良く使われる使用例として頂点カラーでマスクを作成して、シェーダーと組み合わせることで、複数のテクスチャをブレンディングしたりすることができます。（例: 苔の生えた岩等)
@@ -307,6 +309,7 @@ Materials の項目をインスペクターから開いて新しく作成した�
 <img width="600" alt="miniature_colorful_city_11.png" src="/Documentation~/Images/miniature_colorful_city_11.png">
 <img width="600" alt="miniature_colorful_city_18.png" src="/Documentation~/Images/miniature_colorful_city_18.png">
 <img width="600" alt="miniature_colorful_city_22.png" src="/Documentation~/Images/miniature_colorful_city_22.png">
+
 ### 頂点カラーGチャンネル
 
 頂点カラーGチャンネルを確認します。
@@ -472,7 +475,6 @@ ARでは3D都市モデル全体のスケーリングや回転等の機能が実�
 
 # 注意事項/利用規約
 
-- 本ツールはベータバージョンです。バグ、動作不安定、予期せぬ挙動等が発生する可能性があり、動作保証はできかねますのでご了承ください。
 - 本ツールをアンインストールした場合、本ツールの機能で作成されたアセットの動作に不備が発生する可能性があります。
 - 本ツールをアップデートした際は、一度 Unity エディターを再起動することを推奨しています。
 - パフォーマンスの観点から、3km²の範囲に収まる3D都市モデルをダウンロード・インポートすることを推奨しています。
