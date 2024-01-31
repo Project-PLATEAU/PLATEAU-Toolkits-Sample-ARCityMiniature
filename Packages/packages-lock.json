@@ -171,7 +171,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.plateautoolkit": {
-      "version": "https://github.com/PLATEAU-Toolkits-Internal/PLATEAU-SDK-Toolkits-for-Unity.git#main",
+      "version": "https://github.com/Project-PLATEAU/PLATEAU-SDK-Toolkits-for-Unity.git#v1.0.0",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -182,10 +182,10 @@
         "com.unity.visualeffectgraph": "12.1.10",
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       },
-      "hash": "1b6df9c76be4045f8ebe3843bcd01fbde1311e80"
+      "hash": "ee64fb89577a3048d6110aff6c5fdde6d0d86360"
     },
     "com.unity.plateautoolkit.ar": {
-      "version": "https://github.com/PLATEAU-Toolkits-Internal/PLATEAU-SDK-AR-Extensions-for-Unity.git#main",
+      "version": "https://github.com/Project-PLATEAU/PLATEAU-SDK-AR-Extensions-for-Unity.git#v1.0.0",
       "depth": 0,
       "source": "git",
       "dependencies": {
